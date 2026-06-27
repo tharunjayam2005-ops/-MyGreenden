@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Greenden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation Bar -->
+    <nav class="bg-green-600 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <span class="text-white text-2xl font-bold">🌿 Greenden</span>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:bg-green-700 px-3 py-2 rounded-md font-medium transition">Home</a>
+                    <a href="products.html" class="text-white hover:bg-green-700 px-3 py-2 rounded-md font-medium transition">Products</a>
+                    <a href="contact.html" class="text-white bg-green-700 px-3 py-2 rounded-md font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="text-white block px-3 py-2 rounded-md hover:bg-green-700">Home</a>
+                <a href="products.html" class="text-white block px-3 py-2 rounded-md hover:bg-green-700">Products</a>
+                <a href="contact.html" class="text-white block px-3 py-2 rounded-md bg-green-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-green-50 to-emerald-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-green-700 mb-4">Contact Us</h1>
+            <p class="text-lg text-gray-700">We'd love to hear from you. Get in touch with our team today!</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12">
+
+                <!-- Contact Information -->
+                <div class="md:col-span-1">
+                    <h2 class="text-2xl font-bold text-green-700 mb-8">Contact Information</h2>
+
+                    <!-- Address -->
+                    <div class="mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-3xl">📍</div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">Address</h3>
+                                <p class="text-gray-600">
+                                   J79C+G2G,<br>
+                                    Vadugasathu,<br>
+                                     Tamil Nadu 632326
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-3xl">📞</div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">Phone</h3>
+                                <p class="text-gray-600">
+                                    <a href="tel:+123456789" class="hover:text-green-600">9585585754</a><br>
+                                    <span class="text-sm text-gray-500">Monday to Friday, 9AM - 6PM</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-3xl">✉️</div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">Email</h3>
+                                <p class="text-gray-600">
+                                    <a href="mailto:greendenoffice@gmail.com" class="hover:text-green-600">greendenoffice@gmail.com</a><br>
+                                    <a href="mailto:supportgreenden@gmail.com" class="hover:text-green-600">supportgreenden@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-lg text-green-700 mb-4">Business Hours</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex justify-between"><span>Monday - Friday:</span> <span>9:00 AM - 6:00 PM</span></li>
+                            <li class="flex justify-between"><span>Saturday:</span> <span>10:00 AM - 4:00 PM</span></li>
+                            <li class="flex justify-between"><span>Sunday:</span> <span>Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="md:col-span-2">
+                    <div class="bg-green-50 p-8 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold text-green-700 mb-6">Send us a Message</h2>
+                        <form id="contactForm" onsubmit="handleSubmit(event)">
+
+                            <!-- Name Field -->
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-semibold text-gray-800 mb-2">Full Name</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-200"
+                                    placeholder="Enter your full name"
+                                >
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-semibold text-gray-800 mb-2">Email Address</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-200"
+                                    placeholder="your@email.com"
+                                >
+                            </div>
+
+                            <!-- Phone Field -->
+                            <div class="mb-6">
+                                <label for="phone" class="block text-sm font-semibold text-gray-800 mb-2">Phone Number (Optional)</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-200"
+                                    placeholder="+1 (234) 567-890"
+                                >
+                            </div>
+
+                            <!-- Subject Field -->
+                            <div class="mb-6">
+                                <label for="subject" class="block text-sm font-semibold text-gray-800 mb-2">Subject</label>
+                                <select 
+                                    id="subject" 
+                                    name="subject" 
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-200"
+                                >
+                                    <option value="">Select a subject</option>
+                                    <option value="product-inquiry">Product Inquiry</option>
+                                    <option value="shipping-question">Shipping Question</option>
+                                    <option value="plant-care">Plant Care Advice</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-semibold text-gray-800 mb-2">Message</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    required
+                                    rows="6"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-200"
+                                    placeholder="Tell us more about your inquiry..."
+                                ></textarea>
+                            </div>
+
+                            <!-- Checkbox -->
+                            <div class="mb-6">
+                                <label class="flex items-center">
+                                    <input 
+                                        type="checkbox" 
+                                        name="subscribe" 
+                                        class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                                    >
+                                    <span class="ml-2 text-sm text-gray-600">Subscribe to our newsletter for plant care tips</span>
+                                </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button 
+                                type="submit"
+                                class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+                            >
+                                Send Message
+                            </button>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                            <p class="font-semibold">Thank you for your message!</p>
+                            <p class="text-sm">We'll get back to you as soon as possible.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="bg-green-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-green-700 mb-8">Visit Our Store</h2>
+            <div class="bg-gray-200 rounded-lg overflow-hidden h-96 flex items-center justify-center">
+                <div class="text-center text-gray-600">
+                    <p class="text-2xl mb-4"><img src="./image/location.png" alt="location" width="250" height="500"></p>
+                    <div id="qrcode"></div>
+                    <script src="https://maps.app.goo.gl/PUpLEtQoMnJE4pj7A"></script>
+                    <p class="font-semibold">J79C+G2G, Vadugasathu, Tamil Nadu 632326</p>
+                    <p class="text-sm mt-2">Interactive map would display here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-green-700 mb-8 text-center">Frequently Asked Questions</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- FAQ 1 -->
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">How long does delivery take?</h3>
+                    <p class="text-gray-600">Standard delivery takes 5-7 business days. Express delivery options are available for an additional fee.</p>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Are the plants guaranteed to arrive healthy?</h3>
+                    <p class="text-gray-600">Yes! We guarantee all plants arrive in perfect condition. If not, we offer a full replacement.</p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Do you offer care instructions?</h3>
+                    <p class="text-gray-600">Absolutely! Each plant comes with detailed care instructions and our team is always available for guidance.</p>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">What's your return policy?</h3>
+                    <p class="text-gray-600">We offer a 30-day money-back guarantee if you're not completely satisfied with your purchase.</p>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Do you ship internationally?</h3>
+                    <p class="text-gray-600">Currently, we ship within the United States. International shipping options coming soon!</p>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Can I get a bulk order discount?</h3>
+                    <p class="text-gray-600">Yes! Contact us directly for bulk orders and special pricing on quantities of 10+ plants.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-green-600 to-emerald-600 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Can't Find What You're Looking For?</h2>
+            <p class="text-green-50 text-lg mb-8">Browse our full collection of plants and accessories on our products page.</p>
+            <a href="products.html" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition inline-block">
+                View All Products
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Greenden</h4>
+                    <p class="text-sm">Your trusted source for premium plants and gardening supplies.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+                        <li><a href="products.html" class="hover:text-green-400">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-green-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-green-400">FAQ</a></li>
+                        <li><a href="#" class="hover:text-green-400">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-green-400">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Follow Us</h4>
+                    <p class="text-sm mb-4">Connect with us on social media</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-green-400">Facebook</a>
+                        <a href="#" class="hover:text-green-400">Instagram</a>
+                        <a href="#" class="hover:text-green-400">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gray-700 mb-8">
+            <div class="text-center text-sm">
+                <p>&copy; 2024 Greenden. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

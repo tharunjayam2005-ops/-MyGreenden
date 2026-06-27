@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Greenden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation Bar -->
+    <nav class="bg-green-600 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <span class="text-white text-2xl font-bold">🌿 Greenden</span>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:bg-green-700 px-3 py-2 rounded-md font-medium transition">Home</a>
+                    <a href="products.html" class="text-white bg-green-700 px-3 py-2 rounded-md font-medium">Products</a>
+                    <a href="contact.html" class="text-white hover:bg-green-700 px-3 py-2 rounded-md font-medium transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="text-white block px-3 py-2 rounded-md hover:bg-green-700">Home</a>
+                <a href="products.html" class="text-white block px-3 py-2 rounded-md bg-green-700">Products</a>
+                <a href="contact.html" class="text-white block px-3 py-2 rounded-md hover:bg-green-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-green-50 to-emerald-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-green-700 mb-4">Our Products</h1>
+            <p class="text-lg text-gray-700">Discover our wide range of premium plants and gardening essentials</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="bg-white border-b border-gray-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Filter by Category</h3>
+            <div class="flex flex-wrap gap-3">
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition">All Products</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-300 transition">Indoor Plants</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-300 transition">Outdoor Plants</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-300 transition">Succulents</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-300 transition">Accessories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-green-100 h-48 flex items-center justify-center text-6xl"><img src="./image/pro1.jpg" alt="Monstera Deliciosa"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Monstera Deliciosa</h3>
+                        <p class="text-gray-600 text-sm mb-4">A stunning tropical plant with distinctive fenestrated leaves. Perfect for large spaces.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$400</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-emerald-100 h-48 flex items-center justify-center text-6xl"><img src="./image/pro2.jpg" alt="Snake Plant"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Snake Plant</h3>
+                        <p class="text-gray-600 text-sm mb-4">Low-maintenance plant that thrives in any light condition. Great for beginners.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$100</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-lime-100 h-48 flex items-center justify-center text-6xl"><img src="./image/pro3.1.jpg" alt="Lucky Bamboo"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Lucky Bamboo</h3>
+                        <p class="text-gray-600 text-sm mb-4">Traditional symbol of good fortune. Perfect for office desks and home décor.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$200</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-green-100 h-48 flex items-center justify-center text-6xl"><img src="./image/pro4.jpg" alt="Pothas Golden"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pothos Golden</h3>
+                        <p class="text-gray-600 text-sm mb-4">Trailing plant with heart-shaped leaves. Ideal for hanging baskets and shelves.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$150</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-yellow-100 h-48 flex items-center justify-center text-6xl"><img src="./image/pro5.jpg" alt="Aloe Vera"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Aloe Vera</h3>
+                        <p class="text-gray-600 text-sm mb-4">Succulent plant with healing properties. Requires minimal watering.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$175</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-emerald-100 h-48 flex items-center justify-center text-6xl"><img src="./image/pro6.jpg" alt="Jade Plant"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Jade Plant</h3>
+                        <p class="text-gray-600 text-sm mb-4">Bring luck and prosperity with this beautiful succulent tree plant.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$250</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-green-100 h-48 flex items-center justify-center text-6xl"><img src="./image/pro7.jpg" alt="peace lily"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Peace Lily</h3>
+                        <p class="text-gray-600 text-sm mb-4">Beautiful flowering plant that purifies air. Thrives in low light.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$380</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-lime-100 h-48 flex items-center justify-center text-6xl"><img src="./image/pro8.jpg" alt="Rubber plant"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Rubber Plant</h3>
+                        <p class="text-gray-600 text-sm mb-4">Bold green leaves make a statement. Excellent for modern interiors.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$500</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="bg-emerald-100 h-48 flex items-center justify-center text-6xl"><img src="./image/pro9.jpg" alt="Spider plant"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Spider Plant</h3>
+                        <p class="text-gray-600 text-sm mb-4">Produces adorable baby plantlets. Pet-safe and easy to propagate.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$150</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section class="bg-green-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-green-700 mb-8">Plant Accessories</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-5xl mb-4">🏺</div>
+                    <h3 class="font-bold text-lg mb-2">Ceramic Pots</h3>
+                    <p class="text-gray-600 text-sm">Beautiful pots from $15</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-5xl mb-4">💧</div>
+                    <h3 class="font-bold text-lg mb-2">Watering Cans</h3>
+                    <p class="text-gray-600 text-sm">Perfect spray nozzles from $12</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-5xl mb-4">🌍</div>
+                    <h3 class="font-bold text-lg mb-2">Potting Soil</h3>
+                    <p class="text-gray-600 text-sm">Nutrient-rich soil from $10</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-5xl mb-4">✂️</div>
+                    <h3 class="font-bold text-lg mb-2">Garden Tools</h3>
+                    <p class="text-gray-600 text-sm">Pruning sets from $20</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-green-600 to-emerald-600 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Need Help Choosing?</h2>
+            <p class="text-green-50 text-lg mb-8">Our plant experts are here to help you find the perfect plant for your space.</p>
+            <a href="contact.html" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition inline-block">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Greenden</h4>
+                    <p class="text-sm">Your trusted source for premium plants and gardening supplies.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+                        <li><a href="products.html" class="hover:text-green-400">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-green-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-green-400">FAQ</a></li>
+                        <li><a href="#" class="hover:text-green-400">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-green-400">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Follow Us</h4>
+                    <p class="text-sm mb-4">Connect with us on social media</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-green-400">Facebook</a>
+                        <a href="#" class="hover:text-green-400">Instagram</a>
+                        <a href="#" class="hover:text-green-400">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gray-700 mb-8">
+            <div class="text-center text-sm">
+                <p>&copy; 2024 Greenden. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenden - Fresh Plants & Green Living</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation Bar -->
+    <nav class="bg-green-600 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <span class="text-white text-2xl font-bold">🌿 Greenden</span>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:bg-green-700 px-3 py-2 rounded-md font-medium transition">Home</a>
+                    <a href="products.html" class="text-white hover:bg-green-700 px-3 py-2 rounded-md font-medium transition">Products</a>
+                    <a href="contact.html" class="text-white hover:bg-green-700 px-3 py-2 rounded-md font-medium transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="text-white block px-3 py-2 rounded-md hover:bg-green-700">Home</a>
+                <a href="products.html" class="text-white block px-3 py-2 rounded-md hover:bg-green-700">Products</a>
+                <a href="contact.html" class="text-white block px-3 py-2 rounded-md hover:bg-green-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-green-50 to-emerald-50 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <h1 class="text-4xl md:text-5xl font-bold text-green-700">
+                        Welcome to Greenden
+                    </h1>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Discover a world of lush green plants that bring life, freshness, and natural beauty to your spaces. From indoor houseplants to garden essentials, we have everything you need to create your green paradise.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="products.html" class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition text-center">
+                            Explore Products
+                        </a>
+                        <a href="contact.html" class="bg-white text-green-600 border-2 border-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition text-center">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="flex justify-center">
+                    <div class="bg-green-200 rounded-lg p-8 w-full aspect-square flex items-center justify-center">
+                        <div class="text-6xl"><img src="./image/home image.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+                Why Choose Greenden?
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-green-50 p-8 rounded-lg text-center hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">🌿</div>
+                    <h3 class="text-xl font-bold text-green-700 mb-3">Premium Quality</h3>
+                    <p class="text-gray-700">
+                        Handpicked plants sourced from trusted growers to ensure the best health and appearance.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-green-50 p-8 rounded-lg text-center hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">📦</div>
+                    <h3 class="text-xl font-bold text-green-700 mb-3">Fast Delivery</h3>
+                    <p class="text-gray-700">
+                        Quick and safe shipping to your doorstep. Your plants arrive fresh and ready to thrive.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-green-50 p-8 rounded-lg text-center hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">💚</div>
+                    <h3 class="text-xl font-bold text-green-700 mb-3">Expert Support</h3>
+                    <p class="text-gray-700">
+                        Get care tips and guidance from our plant experts to keep your green friends happy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-green-50 py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-green-200 rounded-lg p-8 flex items-center justify-center aspect-square">
+                    <div class="text-6xl"><img src="./image/Our Mission.jpg" alt="green earth"></div>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-700">
+                        Our Mission
+                    </h2>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        At Greenden, we believe everyone deserves access to beautiful plants that enhance their living spaces. Our mission is to make plant ownership easy, affordable, and enjoyable for everyone.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Whether you're a seasoned plant parent or just starting your green journey, we're here to support you with quality products and expert advice.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-green-600 to-emerald-600 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Go Green?
+            </h2>
+            <p class="text-green-50 text-lg mb-8">
+                Browse our collection of premium plants and start your green adventure today.
+            </p>
+            <a href="products.html" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition inline-block">
+                Shop Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Greenden</h4>
+                    <p class="text-sm">Your trusted source for premium plants and gardening supplies.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+                        <li><a href="products.html" class="hover:text-green-400">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-green-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-green-400">FAQ</a></li>
+                        <li><a href="#" class="hover:text-green-400">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-green-400">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Follow Us</h4>
+                    <p class="text-sm mb-4">Connect with us on social media</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-green-400">Facebook</a>
+                        <a href="#" class="hover:text-green-400">Instagram</a>
+                        <a href="#" class="hover:text-green-400">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gray-700 mb-8">
+            <div class="text-center text-sm">
+                <p>&copy; 2024 Greenden. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
